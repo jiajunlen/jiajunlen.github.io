@@ -6,7 +6,7 @@
   <link href="https://jiajunlen.github.io/atom.xml" rel="self"/>
   
   <link href="https://jiajunlen.github.io/"/>
-  <updated>2024-03-13T08:36:26.142Z</updated>
+  <updated>2024-03-20T08:38:18.663Z</updated>
   <id>https://jiajunlen.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>socket-base-learn</title>
+    <link href="https://jiajunlen.github.io/post/socket/"/>
+    <id>https://jiajunlen.github.io/post/socket/</id>
+    <published>2024-03-13T08:37:06.000Z</published>
+    <updated>2024-03-20T08:38:18.663Z</updated>
+    
+    <content type="html"><![CDATA[<p>xue</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;xue&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="网络编程" scheme="https://jiajunlen.github.io/category/%E7%BD%91%E7%BB%9C%E7%BC%96%E7%A8%8B/"/>
+    
+    
+    <category term="C/C++;socket" scheme="https://jiajunlen.github.io/tag/C-C-socket/"/>
+    
+  </entry>
   
   <entry>
     <title>STL</title>
