@@ -102,18 +102,18 @@
 
 <h3 id="1-5-this指针"><a href="#1-5-this指针" class="headerlink" title="1.5 this指针"></a>1.5 this指针</h3><p>this 是 C++ 中的一个关键字，也是一个 const 指针，它指向当前对象，通过它可以访问当前对象的所有成员。</p>
 <p>this 实际上是成员函数的一个形参，在调用成员函数时将对象的地址作为实参传递给 this。它是成员函数和成员变量关联的桥梁。</p>
-<h3 id="1-6-静态变量"><a href="#1-6-静态变量" class="headerlink" title="1.6 静态变量"></a>1.6 静态变量</h3><p>在C++中，我们可以使用静态成员变量来实现多个对象共享数据的目标。静态成员变量是一种特殊的成员变量，它被关键字static修饰<br>static 成员变量既可以通过对象来访问，也可以通过类来访问。</p>
+<h3 id="1-6-静态成员变量"><a href="#1-6-静态成员变量" class="headerlink" title="1.6 静态成员变量"></a>1.6 静态成员变量</h3><p>在C++中，我们可以使用静态成员变量来实现多个对象共享数据的目标。静态成员变量是一种特殊的成员变量，它被关键字static修饰<br>static 成员变量既可以通过对象来访问，也可以通过类来访问。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">注意1：static 成员变量的内存既不是在声明类时分配，也不是在创建对象时分配，而是在（类外）初始化时分配。反过来说，没有在类外初始化的</span><br><span class="line">static 成员变量不能使用。</span><br><span class="line"></span><br><span class="line">注意2：static 成员变量不占用对象的内存，而是在所有对象之外开辟内存，即使不创建对象也可以访问，只要你在类外有进行初始化。具体来说，static 成员变量和普通的 static 变量类似，都在内存分区中的全局数据区分配内存。</span><br></pre></td></tr></table></figure>
 <p>使用静态变量注意下面几点：</p>
 <p>①一个类中可以有一个或多个静态成员变量，所有的对象都共享这些静态成员变量，都可以引用它。<br>②static 成员变量和普通 static 变量一样，都在内存分区中的全局数据区分配内存，到程序结束时才释放。这就意味着，static 成员变量不随对象的创建而分配内存，也不随对象的销毁而释放内存。而普通成员变量在对象创建时分配内存，在对象销毁时释放内存。<br>③静态成员变量必须初始化，而且只能在类体外进行。<br>④静态成员变量既可以通过对象名访问，也可以通过类名访问，但要遵循 private、protected 和 public 关键字的访问权限限制。当通过对象名访问时，对于不同的对象，访问的是同一份内存。</p>
-<h3 id="1-7-静态函数"><a href="#1-7-静态函数" class="headerlink" title="1.7 静态函数"></a>1.7 静态函数</h3><p>普通成员函数可以访问所有成员（包括成员变量和成员函数），静态成员函数只能访问静态成员。</p>
+<h3 id="1-7-静态成员函数"><a href="#1-7-静态成员函数" class="headerlink" title="1.7 静态成员函数"></a>1.7 静态成员函数</h3><p>普通成员函数可以访问所有成员（包括成员变量和成员函数），静态成员函数只能访问静态成员。</p>
 <p>编译器在编译一个普通成员函数时，会隐式地增加一个形参 this，并把当前对象的地址赋值给 this，所以普通成员函数只能在创建对象后通过对象来调用，因为它需要当前对象的地址。而静态成员函数可以通过类来直接调用，编译器不会为它增加形参 this，它不需要当前对象的地址，所以不管有没有创建对象，都可以调用静态成员函数。</p>
 <p>普通成员变量占用对象的内存，静态成员函数没有 this 指针，不知道指向哪个对象，无法访问对象的成员变量，也就是说静态成员函数不能访问普通成员变量，只能访问静态成员变量。</p>
 <h3 id="1-8-const成员函数"><a href="#1-8-const成员函数" class="headerlink" title="1.8 const成员函数"></a>1.8 const成员函数</h3><p>const 成员函数可以使用类中的所有成员变量，但是不能修改它们的值，这种措施主要还是为了保护数据而设置的。const 成员函数也称为常成员函数。我们通常将 get 函数设置为常成员函数。读取成员变量的函数的名字通常以get开头，后跟成员变量的名字，所以通常将它们称为 get 函数。常成员函数需要在声明和定义的时候在函数头部的结尾加上 const 关键字。</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">最后强调一下，const位置不同，那么对应的含义也不同：</span><br><span class="line"></span><br><span class="line">函数开头的 const 用来修饰函数的返回值，表示返回值是 const 类型，也就是不能被修改</span><br><span class="line">例如const char * getname()。</span><br><span class="line"></span><br><span class="line">函数头部的结尾加上 const 表示常成员函数，这种函数只能读取成员变量的值，而不能修改成员变量的值</span><br><span class="line">例如char * getname() const。</span><br></pre></td></tr></table></figure>
 
 
-<h2 id="3、继承"><a href="#3、继承" class="headerlink" title="3、继承"></a>3、继承</h2><h2 id="4、多态与虚函数"><a href="#4、多态与虚函数" class="headerlink" title="4、多态与虚函数"></a>4、多态与虚函数</h2>
+<h2 id="2、继承"><a href="#2、继承" class="headerlink" title="2、继承"></a>2、继承</h2><h2 id="3、多态与虚函数"><a href="#3、多态与虚函数" class="headerlink" title="3、多态与虚函数"></a>3、多态与虚函数</h2>
                 
                 <p class="end">__END__</p>
             </div>
@@ -153,6 +153,9 @@
                     </div>
                 
                 <div class="article-prev-next">
+                    
+                        <a href="/post/stlbase/" class="prev-prefix">« </a> 上一篇：    <a href="/post/stlbase/" title="发布于 2024-03-13 03:14">STL</a>
+                        <br>
                     
                     
                         <a href="/post/cppbase/" class="next-prefix">» </a> 下一篇：    <a href="/post/cppbase/" title="发布于 2024-03-11 10:19">C/C++基础</a>
