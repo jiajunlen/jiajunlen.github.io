@@ -94,26 +94,26 @@
   </entry>
   
   <entry>
-    <title>聊天项目</title>
-    <link href="https://jiajunlen.github.io/post/projectChat/"/>
-    <id>https://jiajunlen.github.io/post/projectChat/</id>
+    <title>动态链接库</title>
+    <link href="https://jiajunlen.github.io/post/dynamicLinkedLibrary/"/>
+    <id>https://jiajunlen.github.io/post/dynamicLinkedLibrary/</id>
     <published>2024-03-10T08:45:02.000Z</published>
-    <updated>2024-03-11T10:52:27.298Z</updated>
+    <updated>2024-03-20T08:33:51.808Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h3><p>跟着教程学习，基于编程语言C++于Qt的IDE进行界面开发、asio异步服务器设计、beast网络库搭建http网关、nodejs搭建验证服务、各服务间grpc通信、service和client使用asio通信、用户信息录入等，实现跨平台设计。</p><h3 id="架构"><a href="#架构" class="headerlink" title="架构"></a>架构</h3><p><img src="/post/projectChat/1.png" alt="架构图"></p>]]></content>
+    <content type="html"><![CDATA[<h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>简单了解一下<br>动态链接库（Dynamic Link Library 或者 Dynamic-link Library，缩写为 DLL）</p><h1 id="VS2019-Win10"><a href="#VS2019-Win10" class="headerlink" title="VS2019 + Win10"></a>VS2019 + Win10</h1><p><img src="/post/dynamicLinkedLibrary/1.png" alt="架构图"></p><h1 id="QT-Win10"><a href="#QT-Win10" class="headerlink" title="QT + Win10"></a>QT + Win10</h1>]]></content>
     
     
       
       
-    <summary type="html">&lt;h3 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h3&gt;&lt;p&gt;跟着教程学习，基于编程语言C++于Qt的IDE进行界面开发、asio异步服务器设计、beast网络库搭建http网关、nodejs搭建验证服</summary>
+    <summary type="html">&lt;h1 id=&quot;简介&quot;&gt;&lt;a href=&quot;#简介&quot; class=&quot;headerlink&quot; title=&quot;简介&quot;&gt;&lt;/a&gt;简介&lt;/h1&gt;&lt;p&gt;简单了解一下&lt;br&gt;动态链接库（Dynamic Link Library 或者 Dynamic-link Library，缩写为 DLL）&lt;</summary>
       
     
     
     
-    <category term="项目学习" scheme="https://jiajunlen.github.io/category/%E9%A1%B9%E7%9B%AE%E5%AD%A6%E4%B9%A0/"/>
+    <category term="dll" scheme="https://jiajunlen.github.io/category/dll/"/>
     
     
-    <category term="C/C++;Qt;http;nodejs;windows;asio" scheme="https://jiajunlen.github.io/tag/C-C-Qt-http-nodejs-windows-asio/"/>
+    <category term="C/C++;Qt;windows;" scheme="https://jiajunlen.github.io/tag/C-C-Qt-windows/"/>
     
   </entry>
   
